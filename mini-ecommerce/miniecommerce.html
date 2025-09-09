@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Tokopedia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .navbar-brand img {
+      height: 35px;
+    }
+    .product-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease-in-out;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .product-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .product-price {
+      font-weight: bold;
+      color: #27ae60;
+      font-size: 1.05rem;
+      margin-bottom: 5px;
+    }
+    .rating {
+      color: #f39c12;
+      font-size: 0.9rem;
+    }
+    .sold {
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success fs-4" href="#">
+   TokoPdidi
+</a>
+
+      <form class="d-flex w-50 mx-3">
+        <input class="form-control me-2" type="search" placeholder="Cari produk..." aria-label="Search">
+        <button class="btn btn-success" type="submit">Cari</button>
+      </form>
+      <div class="d-flex">
+        <button class="btn btn-outline-success me-2">Login</button>
+        <button class="btn btn-success">Daftar</button>
+        <button class="btn btn-outline-success ms-3">🛒 Keranjang</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-3">
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="harddisk.jpg" class="product-img" alt="Harddisk">
+          <div class="card-body">
+            <div class="product-title">Harddisk 1TB</div>
+            <div class="product-price">Rp 100.000</div>
+            <div class="rating">⭐⭐⭐⭐ <span class="sold">Terjual 500+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="keyboard.jpg" class="product-img" alt="Keyboard MSI">
+          <div class="card-body">
+            <div class="product-title">Keyboard MSI Gaming</div>
+            <div class="product-price">Rp 300.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐ <span class="sold">Terjual 1rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="mouse.jpeg" class="product-img" alt="Mouse Genius">
+          <div class="card-body">
+            <div class="product-title">Mouse Genius</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐⭐⭐ <span class="sold">Terjual 800+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="2b-joyko.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Pensil 2B Joyko</div>
+            <div class="product-price">Rp 5.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 2rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="buktul-a4.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Buku Tulis A4</div>
+            <div class="product-price">Media Tulis</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 2rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="buktul-a5.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Buku Tulis A5</div>
+            <div class="product-price">Rp 900.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 100rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="celanapendek wanita.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Celana Pendek wanita</div>
+            <div class="product-price">Rp 1.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 1jt+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="celanapendekpria.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title"></div>
+            <div class="product-price">Rp 300.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 1</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="headset.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Headset Gaming</div>
+            <div class="product-price">Rp 900.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 2rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="jam-imoo.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Jam imoo</div>
+            <div class="product-price">Rp 800.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 90</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="jam-rolex.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Jam Rolex Sultan</div>
+            <div class="product-price">Rp 15.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 50rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="kabel-c.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Kabel Type C</div>
+            <div class="product-price">Rp 20.000</div>
+            <div class="rating">⭐⭐⭐ <span class="sold">Terjual 2rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="kaos-polos-hitam.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Kaos Polos Hitam</div>
+            <div class="product-price">Rp 75.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 9rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="kaos-polos-putih.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Kaos Polos Putih</div>
+            <div class="product-price">Rp 95.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 9rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="linggis.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">lingerei</div>
+            <div class="product-price">Rp 500</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 80rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="mikro-usb.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Kabel Mikro USB </div>
+            <div class="product-price">Rp 700.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 40rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="pensil-hb.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Pensil Hb</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 30rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="pensil-warna.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Pensil Warna Joko</div>
+            <div class="product-price">Rp 400.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 8rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="powerbank-10000mah.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Powerbank 1000mah</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐ <span class="sold">Terjual 20rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="powerbank-500mah.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Powerbank 500mah</div>
+            <div class="product-price">Rp 76.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐ <span class="sold">Terjual 20rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="pulpen-gel-joko.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Pulpen Gel Joko</div>
+            <div class="product-price">Rp 50.000.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 1</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="pulpen-kenko-05.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Pulpen Kenko ukuran 0,5</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 90</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="sandisk.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">sandisk</div>
+            <div class="product-price">Rp 3.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 99999</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="sepatu-adidas.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Sepatu Adidi's</div>
+            <div class="product-price">Rp 300.000</div>
+            <div class="rating">⭐⭐⭐⭐⭐⭐⭐⭐⭐ <span class="sold">Terjual 99999+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="sepatu-nike.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Sepatu Nike</div>
+            <div class="product-price">Rp 40.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 30rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="sepatu-puma.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Sepatu Puma</div>
+            <div class="product-price">Rp 500.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 89rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="speaker.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">speaker</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 30rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="spidol-snowman.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Spidol Snowman</div>
+            <div class="product-price">Rp 1.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 3</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="spidol-warna.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">Spidol Warna</div>
+            <div class="product-price">Rp 50.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 30rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card shadow-sm">
+          <img src="usb-a-to-b.jpg" class="product-img" alt="Pensil Joyko 2B">
+          <div class="card-body">
+            <div class="product-title">USB A to B</div>
+            <div class="product-price">Rp 14.000</div>
+            <div class="rating">⭐⭐ <span class="sold">Terjual 4rb+</span></div>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <button class="btn btn-success w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
